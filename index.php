@@ -31,9 +31,7 @@ try{
 }
 
 ?>
-<html>
-    <head></head>
-    <body>
+<?php include __DIR__ . '/header.php'; ?>
 <?php if (null !== $errormsg): ?>
 <div class="alert error"><?php echo $errormsg; ?></div>
 <?php else: ?>
@@ -44,7 +42,7 @@ try{
 <tr>
 <td><?php echo $post['id']; ?></td> <td><?php echo $post['title']; ?></td> <td><?php echo $post['content']; ?></td>
 </tr>
-<?php endforeach; ?> </tbody>
+<?php endforeach; ?>
+        </tbody>
         </table>
-    </body>
-</html>
+<?php include __DIR__ . '/footer.php'; ?>
